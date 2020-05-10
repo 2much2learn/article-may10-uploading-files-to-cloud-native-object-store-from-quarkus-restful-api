@@ -119,6 +119,46 @@
 			"response": []
 		},
 		{
+			"name": "02 Upload Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "image/png"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/home/madan/work/projects/2much2learn/2much2learn/src/images/banner-bg.png"
+					},
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/CTLG-123-0001/image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"CTLG-123-0001",
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "02 Get Catalogue Items",
 			"request": {
 				"method": "GET",
@@ -234,28 +274,6 @@
 						"api",
 						"v1",
 						"CTLG-123-0005"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "07 Handler Not Found",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/v1/test/handler",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"v1",
-						"test",
-						"handler"
 					]
 				}
 			},
